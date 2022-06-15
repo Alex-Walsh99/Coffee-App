@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>        
+        <title>Stoke on Trent Coffee</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style/normalize.css">
+        <link rel="stylesheet" href="style/vars.css">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/navigation.css">
+        <link rel="stylesheet" href="style/index.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+
+    <body>                
+        <div class = "nav-hamburger" onclick="openMenu()">
+            <img src="img/menu_hamburger.svg" alt="Expand Menu" class="menu-hamburger">
+        </div>
+        <nav role ="navigation" id="nav-mobile-menu" class="nav-container-dropdown hidden">
+            <a class="nav-item-dropdown" href="index.html">Home</a>
+            <a class="nav-item-dropdown" href="order.html">Order</a>
+            <a class="nav-item-dropdown" href="coffee.html">Coffee</a>                
+        </nav>
+        <div class="hero-image">
+            <div class="nav-container-mobile">
+                    <img class ="nav-item nav-item-logo" id="logo" src="img/logo-webp-984.webp" alt="Stoke on Trent Cafe Logo" width="250px">
+            </div>
+
+            <nav role ="navigation" class="nav-container">
+                <picture class ="nav-item">
+                    <img id="logo" src="img/logo-webp-984.webp" alt="Stoke on Trent Cafe Logo" width="250px">
+                </picture>
+                <ul>
+                    <a class ="nav-item" href="index.html">Home</a>
+
+                    <a class ="nav-item" href="order.html">Order</a>
+
+                    <a class ="nav-item" href="coffee.html">Coffee</a>
+                </ul>
+            </nav>
+            <div class="hero-text">
+              <h1>Great coffee straight to your door</h1>
+            </div>
+        </div>
+
+          <div class="header">
+              <head>
+                  <h1>
+                      Home
+                  </h1>
+              </head>
+          </div>
+
+        <div class="article-list-container">
+            <div class="article article-container">
+                <div class="item-image">
+                        <img src="img/coffee-1x.jpg" alt="A delicious cup of coffee"
+                        srcset="img/coffee-1x.webp, img/coffee-2x.webp 2x, img/coffee-3x.webp 3x">
+                </div>
+                <div class="item-article">
+                    <article>
+                        <div>
+                            <h2 class="item article-header">Order delicious coffee</h2>
+                            <p class="item article-paragraph">Our coffee is freshly roasted and can be ordered directly via our website. Please visit our orders page to see our menu.</p>
+                        </div>
+                        <div class="item article-button-item">
+                            <a href="order.html" class="article-link">Order Now</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="article article-container">
+                <div class="item-image">
+                    <img src="img/coffee_table.jpg" alt="A delicious cup of coffee"
+                    srcset="img/coffee_table_1x.webp, img/coffee_table_2x.webp 2x, img/coffee_table_3x.webp 3x">
+                </div>
+                <div class="item-article">
+                    <article>
+                        <div>
+                            <h2 class="item article-header">View our menu</h2>
+                            <p class="item article-paragraph">View our extensive menu of drinks to be ordered in-store.</p>
+                        </div>
+                        <div class="item article-button-item">
+                            <a href="coffee.html" class="article-link">View Menu</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+    </body>
+    <script>
+        //check whether browser support service workers
+        if ('serviceWorker' in navigator) {
+            //wait until page loaded to avoid delaying rendering
+            window.addEventListener('load', function() {
+                //register service worker
+                navigator.serviceWorker.register('service-worker.js').then(
+                    function(registration) {
+                        console.log('Service worker registration successful', 
+                                    registration);
+                    }, 
+                    function(err) {
+                        console.log('Service worker registration failed', err);
+                });
+            });
+        }
+    </script>
+
+    <script src="js/navigation.js"></script>
+</html>

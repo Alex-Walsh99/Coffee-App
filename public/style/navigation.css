@@ -1,0 +1,140 @@
+
+.menu-hamburger{
+    color:#fff;
+    width:48px; 
+    height:48px;
+  }
+  
+  .nav-container-mobile{
+      display: none;
+  }
+
+  
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+    justify-content: space-between;
+    padding: 10px 25% 10px 25%;
+    color: var(--background);
+  }
+  
+  .nav-container-desktop-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+    justify-content: space-between;
+    padding: 10px 25% 10px 25%;
+    color: var(--background);
+    background-color: var(--header);
+  }
+
+  .nav-item{
+      color: #fff;
+      text-decoration: none;
+      size: 1rem;
+      margin: 5px 15px;
+      font-weight: bold;
+  }
+
+  .nav-item:hover{
+    text-decoration: underline;
+}
+
+  .nav-container-dropdown {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: relative;
+    color: var(--background);
+  }
+
+
+.nav-container-dropdown{
+    display: none;
+  }
+  
+  .nav-hamburger{
+    display: none;
+  }
+
+  @media only screen and (max-width:1300px){
+    .nav-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        position: relative;
+        padding: 10px 15% 10px 15%;
+        color: var(--background);
+      }
+
+    .nav-container-desktop-header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        position: relative;
+        padding: 10px 15% 10px 15%;
+        color: var(--background);
+        background-color: var(--header);
+      }
+  }
+
+  @media only screen and (max-width:1000px){
+
+    .nav-container {
+        display: none;
+    }
+
+    .nav-container-desktop-header {
+        display: none;
+      }
+
+    .nav-container-dropdown{
+      display: flex;
+      flex: column;
+      background-color: var(--header-light);
+      color: white;
+      font-size: 16px;
+    }
+  
+    .nav-item-dropdown{
+      color: white;
+      text-decoration: none;
+    }
+    .nav-item-dropdown:hover{
+      background-color: var(--button-hover);
+    }
+  
+    .nav-hamburger{
+      display: block;
+      background-color: var(--header);
+      padding: 0px 10px;
+    }
+  
+    
+    .nav-item-dropdown{
+      padding:15px;
+    }
+  
+    .nav-container{
+        display: none;
+    }
+    .nav-container-mobile{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      position: relative;
+      padding: 10px 5% 10px 5%;
+      color: var(--background);
+      justify-content: space-between;
+    }
+
+    .hidden{
+        display: none;
+      }
+      
+  }

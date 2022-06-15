@@ -1,0 +1,19 @@
+{
+    "name": "Stoke Cafe",
+    "short_name": "Stoke Cafe",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#bb2a2a",
+    "background_color": "#bb2a2a",
+    "display": "standalone"
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>        
+        <title>Stoke on Trent Coffee</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style/vars.css">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/navigation.css">
+        <link rel="stylesheet" href="style/order.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+
+    <body>                
+        <div class = "nav-hamburger" onclick="openMenu()">
+            <img src="img/menu_hamburger.svg" alt="Expand Menu" class="menu-hamburger">
+        </div>
+        <nav role="navigation" id="nav-mobile-menu" class="nav-container-dropdown hidden">
+            <a class="nav-item-dropdown" href="index.html">Home</a>
+            <a class="nav-item-dropdown" href="order.html">Order</a>
+            <a class="nav-item-dropdown" href="coffee.html">Coffee</a>
+        </nav>
+
+        <nav role="navigation" class="nav-container-desktop-header">
+            <picture class ="nav-item">
+                <img id="logo" src="img/logo-webp-984.webp" alt="Stoke on Trent Cafe Logo" width="250px">
+            </picture>
+            <ul>
+                <a class ="nav-item" href="index.html">Home</a>
+
+                <a class ="nav-item" href="order.html">Order</a>
+
+                <a class ="nav-item" href="coffee.html">Coffee</a>
+            </ul>
+        </nav>
+        </div>
+
+          <div class="header">
+              <head>
+                  <h1>
+                      Order Confirmation
+                  </h1>
+              </head>
+          </div>
+
+        <div class="form-container">
+            <div class="confirmation-box">
+                <p>Thank you for your order!</p>
+                <div>
+                    <a href="index.html" class="article-link">Return to Home</a>
+                </div>
+            </div>
+        </div>
+
+    </body>
+    <script>
+        //check whether browser support service workers
+        if ('serviceWorker' in navigator) {
+            //wait until page loaded to avoid delaying rendering
+            window.addEventListener('load', function() {
+                //register service worker
+                navigator.serviceWorker.register('service-worker.js').then(
+                    function(registration) {
+                        console.log('Service worker registration successful', 
+                                    registration);
+                    }, 
+                    function(err) {
+                        console.log('Service worker registration failed', err);
+                });
+            });
+        }
+    </script>
+    <script src="js/navigation.js"></script>
+</html>

@@ -1,0 +1,23 @@
+.container{
+    display:grid;
+    flex-flow: row wrap;
+    grid-template-columns: 1fr 1fr ;
+}
+
+@media only screen and (max-width:1000px){
+    .container{
+        display:grid;
+        flex-flow: row wrap;
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.coffee-list-item{
+    margin:5px;
+    padding:5px;
+}
+
+.coffee-list-entity{
+    list-style:none;
+}

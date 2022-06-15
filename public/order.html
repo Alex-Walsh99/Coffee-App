@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>        
+        <title>Stoke on Trent Coffee</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style/vars.css">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/navigation.css">
+        <link rel="stylesheet" href="style/order.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+
+    <body>                
+        <div class = "nav-hamburger" onclick="openMenu()">
+            <img src="img/menu_hamburger.svg" alt="Expand Menu" class="menu-hamburger">
+        </div>
+        <nav role ="navigation" id="nav-mobile-menu" class="nav-container-dropdown hidden">
+            <a class="nav-item-dropdown" href="index.html">Home</a>
+            <a class="nav-item-dropdown" href="order.html">Order</a>
+            <a class="nav-item-dropdown" href="coffee.html">Coffee</a>
+        </nav>
+
+        <nav role ="navigation" class="nav-container-desktop-header">
+            <picture class ="nav-item">
+                <img id="logo" src="img/logo-webp-984.webp" alt="Stoke on Trent Cafe Logo" width="250px">
+            </picture>
+            <ul>
+                <a class ="nav-item" href="index.html">Home</a>
+
+                <a class ="nav-item" href="order.html">Order</a>
+
+                <a class ="nav-item" href="coffee.html">Coffee</a>
+            </ul>
+        </nav>
+        </div>
+
+          <div class="header">
+              <head>
+                  <h1>
+                      Order
+                  </h1>
+              </head>
+          </div>
+
+        <form  id="coffee-order-form" class="order_form">
+            <div class="article-list-container">
+                <div class="form-container">
+                    <div id = "validation-message"></div>
+                    <h2 class="form-header">Coffee</h2>
+                    <div class="form-pairing">
+                        <div class="form-label">
+                            <label for="quantity_americano"> Americano</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="number" id="quantity_americano" name="quantity_americano" min="0" max="50" value="0" class="form-input-number form-input">
+                        </div>
+                    </div>
+
+                    <div class="form-pairing">
+                        <div class="form-label">
+                            <label for="quantity_latte"> Latte</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="number" id="quantity_latte" name="quantity_latte" min="0" max="50" value="0"  class="form-input-number form-input">
+                        </div>
+                    </div>
+
+                    <div class="form-pairing">
+                        <div class="form-label">
+                            <label for="quantity_decafe_latte"> Decafe Latte</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="number" id="quantity_decafe_latte" name="quantity_decafe_latte" min="0" max="50" value="0" class="form-input-number form-input">
+                        </div>
+                    </div>
+
+                    <div class="form-pairing">
+                        <div class="form-label">
+                            <label for="quantity_espresso"> Espresso</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="number" id="quantity_espresso" name="quantity_espresso" min="0" max="50" value="0" class="form-input-number form-input">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-container">
+                    <h2 class="form-header">Order Details</h2>
+
+                    <div class="form-pairing">
+                        <div class="form-label">
+                            <label for="text_forename"> First Name</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="text" length=50 id="text_forename" name="text_forename" class="form-input-text form-input" required><span class="required">*</span>
+                        </div>
+                    </div>
+
+                    <div class="form-pairing">
+                        <div class="form-label">
+                            <label for="text_surname"> Last Name</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="text" length=50 id="text_surname" name="text_surname" class="form-input-text form-input" required><span class="required">*</span>
+                        </div>
+                    </div>
+
+                    <div class="form-pairing">
+                        <div class="form-label">
+                            <label for="text_address_line_1"> Address Line 1</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="text" length=50 id="text_address_line_1" name="text_address_line_1" class="form-input-text form-input" required><span class="required">*</span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="form-pairing">
+                        <div class="form-label">
+                            <label for="text_address_line_2"> Address Line 2</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="text" length=50 id="text_address_line_2" name="text_address_line_2" class="form-input-text form-input">
+                        </div>
+                    </div>
+                    
+                    <div class="form-pairing">
+                        <div class="form-label">
+                            <label for="text_address_postcode"> Postcode</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="text" length=12 id="text_address_postcode" name="text_address_postcode" class="form-input-text form-input" required><span class="required">*</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-pairing">
+                        <div class="form-label">
+                            <label for="tel_address_mobile_number"> Mobile Number</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="tel" id="tel_address_mobile_number" name="text_address_mobile_number" class="form-input-text form-input" required><span class="required">*</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-pairing">
+                        <div class="form-label">
+                            <label for="date_delivery_date"> Delivery Date</label>
+                        </div>
+                        <div class="form-input">
+                            <input type="date" id="date_delivery_date" name="date_delivery_date" class="form-input-text form-input" required><span class="required">*</span>
+                        </div>
+                    </div>
+                    <div class = "submit">
+                        <input type="submit" value="Submit" class="article-link">
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+    </body>
+    <script>
+        //check whether browser support service workers
+        if ('serviceWorker' in navigator) {
+            //wait until page loaded to avoid delaying rendering
+            window.addEventListener('load', function() {
+                //register service worker
+                navigator.serviceWorker.register('service-worker.js').then(
+                    function(registration) {
+                        console.log('Service worker registration successful', 
+                                    registration);
+                    }, 
+                    function(err) {
+                        console.log('Service worker registration failed', err);
+                });
+            });
+        }
+    </script>
+    <script src="js/navigation.js"></script>
+    <script src="js/order-validation.js"></script>
+</html>

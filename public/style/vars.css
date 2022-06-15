@@ -1,0 +1,27 @@
+:root{
+    --background: #f9f9f9;
+    --background-2: #fff;
+    --text-article: #321911;
+    --text-button: #fffaf5;
+    --button-background: #321911;
+    --text-nav: #f3f3f3;
+    --nav-selection: #dee8eb;
+    --header:#990f0f;
+    --header-light:#b31515;
+    --button-hover:#7a3e26;
+    --container-border: #e5e5e5;
+
+}
+
+@media (prefers-color-scheme:dark){
+    :root{
+        --background: rgb(37, 35, 39);
+        --background-2: #2d2b31;
+        --text-article: #fffaf5;
+        --button-background: #b31515;
+        --button-hover:#db4141;
+        --text-button: #fffaf5;
+        --container-border: #44414b;
+    }
+}
+
